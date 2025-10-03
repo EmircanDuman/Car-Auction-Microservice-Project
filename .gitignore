@@ -405,3 +405,4 @@ launchSettings.json
 *.user
 *.userosscache
 *.sln.docstates
+.editorconfig
