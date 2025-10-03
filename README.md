@@ -1,0 +1,3 @@
+- Docker postgreSQL run
+- cd AuctionService dotnet watch
+- cd SearchService dotnet watch
