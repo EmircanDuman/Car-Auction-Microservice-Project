@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService", "src\AuctionService\AuctionService.csproj", "{79C5814C-010D-497E-B3FA-D8EB0061ABFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService", "src\SearchService\SearchService.csproj", "{D1142489-1347-4BD0-88B0-68D5040212E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +31,24 @@ Global
 		{79C5814C-010D-497E-B3FA-D8EB0061ABFF}.Release|x64.Build.0 = Release|Any CPU
 		{79C5814C-010D-497E-B3FA-D8EB0061ABFF}.Release|x86.ActiveCfg = Release|Any CPU
 		{79C5814C-010D-497E-B3FA-D8EB0061ABFF}.Release|x86.Build.0 = Release|Any CPU
+		{D1142489-1347-4BD0-88B0-68D5040212E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1142489-1347-4BD0-88B0-68D5040212E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1142489-1347-4BD0-88B0-68D5040212E8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D1142489-1347-4BD0-88B0-68D5040212E8}.Debug|x64.Build.0 = Debug|Any CPU
+		{D1142489-1347-4BD0-88B0-68D5040212E8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D1142489-1347-4BD0-88B0-68D5040212E8}.Debug|x86.Build.0 = Debug|Any CPU
+		{D1142489-1347-4BD0-88B0-68D5040212E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1142489-1347-4BD0-88B0-68D5040212E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1142489-1347-4BD0-88B0-68D5040212E8}.Release|x64.ActiveCfg = Release|Any CPU
+		{D1142489-1347-4BD0-88B0-68D5040212E8}.Release|x64.Build.0 = Release|Any CPU
+		{D1142489-1347-4BD0-88B0-68D5040212E8}.Release|x86.ActiveCfg = Release|Any CPU
+		{D1142489-1347-4BD0-88B0-68D5040212E8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{79C5814C-010D-497E-B3FA-D8EB0061ABFF} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{D1142489-1347-4BD0-88B0-68D5040212E8} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal
