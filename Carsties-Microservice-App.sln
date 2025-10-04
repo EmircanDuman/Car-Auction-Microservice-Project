@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService", "src\Aucti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService", "src\SearchService\SearchService.csproj", "{D1142489-1347-4BD0-88B0-68D5040212E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "src\Contracts\Contracts.csproj", "{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,18 @@ Global
 		{D1142489-1347-4BD0-88B0-68D5040212E8}.Release|x64.Build.0 = Release|Any CPU
 		{D1142489-1347-4BD0-88B0-68D5040212E8}.Release|x86.ActiveCfg = Release|Any CPU
 		{D1142489-1347-4BD0-88B0-68D5040212E8}.Release|x86.Build.0 = Release|Any CPU
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}.Debug|x64.Build.0 = Debug|Any CPU
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}.Debug|x86.Build.0 = Debug|Any CPU
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}.Release|x64.ActiveCfg = Release|Any CPU
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}.Release|x64.Build.0 = Release|Any CPU
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}.Release|x86.ActiveCfg = Release|Any CPU
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +64,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{79C5814C-010D-497E-B3FA-D8EB0061ABFF} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{D1142489-1347-4BD0-88B0-68D5040212E8} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{191CEA87-D06B-47E8-BB77-BEAEC5FC268D} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal
