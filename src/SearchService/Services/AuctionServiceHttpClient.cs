@@ -1,6 +1,6 @@
 using System;
 using MongoDB.Entities;
-using SearchService.models;
+using SearchService.Models;
 
 namespace SearchService.Services;
 
