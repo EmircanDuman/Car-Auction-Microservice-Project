@@ -1,4 +1,7 @@
 A complete mock Car Auction web application.
+Currently deployed, can be viewed at:
+
+http....
 
 # Techs used:
 - .NET Core
@@ -9,7 +12,9 @@ A complete mock Car Auction web application.
 - MongoDB
 - NextJS for frontend
 
-# Structure of the project:
-Microservices architecture
+# Microservices:
 
-AuctionService / Search Service / RabbitMQ w/MassTransit as the event bus / Identity Server...
+- AuctionService
+- Search Service
+- RabbitMQ w/MassTransit as the event bus
+- Identity Server...
