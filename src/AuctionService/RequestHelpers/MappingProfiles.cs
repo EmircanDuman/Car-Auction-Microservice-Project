@@ -15,5 +15,8 @@ public class MappingProfiles : Profile
     CreateMap<CreateAuctionDTO, Auction>().ForMember(d => d.Item, o => o.MapFrom(s => s));
     CreateMap<CreateAuctionDTO, Item>();
     CreateMap<AuctionDTO, AuctionCreated>();
+    // Map Auction entity to AuctionUpdated contract
+    CreateMap<Auction, AuctionUpdated>();
+    CreateMap<Item, AuctionUpdated>();
   }
 }

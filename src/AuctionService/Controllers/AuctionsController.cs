@@ -79,7 +79,7 @@ public class AuctionsController : ControllerBase
 
     if (auction == null) return NotFound();
 
-    if(auction.Seller != User.Identity.Name) return Forbid("You are not the seller of this auction");
+  if(auction.Seller != User.Identity.Name) return Forbid();
 
     auction.Item.Make = updateAuctionDTO.Make ?? auction.Item.Make;
     auction.Item.Model = updateAuctionDTO.Model ?? auction.Item.Model;
@@ -104,7 +104,7 @@ public class AuctionsController : ControllerBase
 
     if (auction == null) return NotFound();
 
-    if(auction.Seller != User.Identity.Name) return Forbid("You are not the seller of this auction");
+  if(auction.Seller != User.Identity.Name) return Forbid();
 
     _context.Auctions.Remove(auction);
 
