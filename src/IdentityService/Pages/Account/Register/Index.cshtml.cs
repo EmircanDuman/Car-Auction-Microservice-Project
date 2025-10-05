@@ -14,14 +14,16 @@ namespace IdentityService.Pages.Register
     public class Index : PageModel
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
-        public Index(UserManager<ApplicationUser> userManager)
+        public Index(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
-        [BindProperty]
-        public RegisterViewModel Input { get; set; }
+    [BindProperty]
+    public RegisterViewModel Input { get; set; } = new RegisterViewModel();
 
         [BindProperty]
         public bool RegisterSuccess { get; set; }
@@ -58,7 +60,18 @@ namespace IdentityService.Pages.Register
                         new Claim(JwtClaimTypes.Name, Input.FullName)
                     });
 
+                    // Sign the user in after successful registration
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+
                     RegisterSuccess = true;
+                }
+                else
+                {
+                    // Surface create errors to the page so failures are visible
+                    foreach (var err in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, err.Description);
+                    }
                 }
             }
 

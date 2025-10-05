@@ -48,6 +48,21 @@ internal static class HostingExtensions
 
     public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
     {
+        // Configure CORS so non-IdentityServer endpoints (like /Account/Register)
+        // can accept cross-origin requests. Adjust origins in production.
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("MyPolicy", policy =>
+            {
+                policy
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials()
+                    // Allow common development origins; replace with specific origins in prod
+                    .SetIsOriginAllowed(origin => true);
+            });
+        });
+
         builder.Services.AddRazorPages();
 
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -96,9 +111,11 @@ internal static class HostingExtensions
             app.UseDeveloperExceptionPage();
         }
 
-        app.UseStaticFiles();
-        app.UseRouting();
-        app.UseIdentityServer();
+    app.UseStaticFiles();
+    app.UseRouting();
+    // Enable CORS for non-IdentityServer endpoints - must be between UseRouting and UseAuthorization
+    app.UseCors("MyPolicy");
+    app.UseIdentityServer();
         app.UseAuthorization();
 
         app.MapRazorPages()
