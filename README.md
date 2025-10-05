@@ -10,11 +10,13 @@ http....
 - RabbitMQ
 - PostgreSQL
 - MongoDB
+- Duende Identity Server
 - NextJS for frontend
 
 # Microservices:
 
 - AuctionService
-- Search Service
+- SearchService
 - RabbitMQ w/MassTransit as the event bus
-- Identity Server...
+- IdentityService
+- ...
