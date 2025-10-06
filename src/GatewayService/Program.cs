@@ -12,6 +12,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     options.RequireHttpsMetadata = false;
     options.TokenValidationParameters.ValidateAudience = false;
     options.TokenValidationParameters.NameClaimType = "username";
+    options.TokenValidationParameters.ValidIssuers = new[] 
+    { 
+        "http://localhost:5001", // for local development
+        "http://identity-svc"    // for Docker environment
+    };
   });
 
 var app = builder.Build();
