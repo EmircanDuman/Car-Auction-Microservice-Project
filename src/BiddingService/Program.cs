@@ -1,5 +1,6 @@
 using BiddingService.Consumers;
 using BiddingService.RequestHelpers;
+using BiddingService.Services;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using MongoDB.Driver;
@@ -41,6 +42,8 @@ builder.Services.AddAutoMapper(cfg =>
 {
     cfg.AddProfile<MappingProfiles>();
 });
+
+builder.Services.AddHostedService<CheckAuctionFinished>();
 
 var app = builder.Build();
 
