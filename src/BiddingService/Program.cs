@@ -1,3 +1,5 @@
+using BiddingService.Consumers;
+using BiddingService.RequestHelpers;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using MongoDB.Driver;
@@ -11,6 +13,8 @@ builder.Services.AddControllers();
 
 builder.Services.AddMassTransit(x =>
 {
+
+    x.AddConsumersFromNamespaceContaining<AuctionCreatedConsumer>();
     x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("bids", false));
 
     x.UsingRabbitMq((context, cfg) =>
@@ -32,6 +36,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
       options.TokenValidationParameters.ValidateAudience = false;
       options.TokenValidationParameters.NameClaimType = "username";
   });
+
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.AddProfile<MappingProfiles>();
+});
 
 var app = builder.Build();
 
