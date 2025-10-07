@@ -19,6 +19,7 @@ public class GrpcAuctionService : GrpcAuction.GrpcAuctionBase
 
     var auction = await _dbContext.Auctions.FindAsync(Guid.Parse(request.Id))
         ?? throw new RpcException(new Status(StatusCode.NotFound, "Not Found"));
+    Console.WriteLine("==> Found auction: " + auction.Id);
 
     var response = new GrpcAuctionResponse
     {
@@ -30,6 +31,7 @@ public class GrpcAuctionService : GrpcAuction.GrpcAuctionBase
         Seller = auction.Seller
       }
     };
+    Console.WriteLine("==> Sending Grpc Response for auction");
 
     return response;
   }
