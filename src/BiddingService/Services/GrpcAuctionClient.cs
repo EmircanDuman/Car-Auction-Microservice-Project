@@ -36,9 +36,10 @@ public class GrpcAuctionClient
       };
       return auction;
     }
-    catch (System.Exception)
+    catch (System.Exception ex)
     {
-      _logger.LogError("Error calling GRPC service");
+      //log out full exception
+      _logger.LogError("Grpc call to Auction service failed" + System.Environment.NewLine + ex.ToString());
       return null;
     }
   }
