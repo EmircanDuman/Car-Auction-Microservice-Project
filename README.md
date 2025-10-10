@@ -1,22 +1,12 @@
-A complete mock Car Auction web application.
-Currently deployed, can be viewed at:
+A complete mock Car Auction web application implemented as a microservice application
 
-http....
+.NET Framework | Microservices | PostgreSQL | MongoDB | Entity Framework | HTTP | gRPC | SignalR | RabbitMQ | Docker | OAuth2
 
-# Techs used:
-- .NET Core
-- Docker
-- Kubernetes
-- RabbitMQ
-- PostgreSQL
-- MongoDB
-- Duende Identity Server
-- NextJS for frontend
-
-# Microservices:
-
-- AuctionService
-- SearchService
-- RabbitMQ w/MassTransit as the event bus
-- IdentityService
-- ...
+- Identity Service implemented with Duende Identity Service
+- Auction Service / Seach Service / Bidding Service / Notification Service are implemented as seperate dockerized applications
+- Communication between seperate services done with RabbitMQ
+- Gateway Service was created for reverse proxying
+- SignalR for sending notifications to frontend
+- Nginx for ingress
+- Postgresql and MongoDB for services
+- HTTP + gRPC connections
