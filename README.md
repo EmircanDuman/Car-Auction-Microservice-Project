@@ -1,5 +1,7 @@
 A complete mock Car Auction web application implemented as a microservice application
 
+![Architecture](https://github.com/EmircanDuman/Car-Auction-Microservice-Project/blob/main/architecture.JPG?raw=true)
+
 .NET Framework | Microservices | PostgreSQL | MongoDB | Entity Framework | HTTP | gRPC | SignalR | RabbitMQ | Docker | OAuth2
 
 - Identity Service implemented with Duende Identity Service
