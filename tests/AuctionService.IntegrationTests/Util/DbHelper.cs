@@ -1,29 +1,27 @@
-using System;
-using AuctionService.Data;
+﻿using AuctionService.Data;
 using AuctionService.Entities;
 
 namespace AuctionService.IntegrationTests.Util;
 
 public static class DbHelper
 {
-  public static void InitDbForTests(AuctionDbContext db)
-  {
-    db.Auctions.AddRange(GetAuctionsForTest());
-    db.SaveChanges();
-  }
-
-  public static void ReinitDbForTests(AuctionDbContext db)
-  {
-    db.Auctions.RemoveRange(db.Auctions);
-    db.SaveChanges();
-    InitDbForTests(db);
-  }
-  
-  private static List<Auction> GetAuctionsForTest()
-  {
-    return new List<Auction>
+    public static void InitDbForTests(AuctionDbContext db)
     {
-      // 1 Ford GT
+        db.Auctions.AddRange(GetAuctionsForTest());
+        db.SaveChanges();
+    }
+
+    public static void ReinitDbForTests(AuctionDbContext db)
+    {
+        db.Auctions.RemoveRange(db.Auctions);
+        db.SaveChanges();
+        InitDbForTests(db);
+    }
+
+    private static List<Auction> GetAuctionsForTest()
+    {
+        return new List<Auction>
+        {
             new() {
                 Id = Guid.Parse("afbee524-5972-4075-8800-7d1f9d7b0a0c"),
                 Status = Status.Live,
@@ -72,7 +70,7 @@ public static class DbHelper
                     Year = 2023,
                     ImageUrl = "https://cdn.pixabay.com/photo/2012/11/02/13/02/car-63930_960_720.jpg"
                 }
-            }
-    };
-  }
+            },
+        };
+    }
 }
