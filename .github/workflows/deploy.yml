@@ -25,6 +25,9 @@ jobs:
           - name: 'emircanduman/identity-svc'
             path: 'src/IdentityService'
 
+          - name: 'emircanduman/gateway-svc'
+            path: 'src/GatewayService'
+          
           - name: 'emircanduman/notify-svc'
             path: 'src/NotificationService'
 
