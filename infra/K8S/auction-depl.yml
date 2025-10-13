@@ -13,8 +13,7 @@ spec:
     spec:
       containers:
       - name: auction-svc
-        image: emircanduman/auction-svc
-        imagePullPolicy: Never
+        image: emircanduman/auction-svc:latest
         env:
         - name: ConnectionStrings__DefaultConnection
           valueFrom:
