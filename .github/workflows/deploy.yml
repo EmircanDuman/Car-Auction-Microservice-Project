@@ -14,6 +14,21 @@ jobs:
           - name: 'emircanduman/auction-svc'
             path: 'src/AuctionService'
 
+          - name: 'emircanduman/search-svc'
+            path: 'src/SearchService'
+
+          - name: 'emircanduman/bid-svc'
+            path: 'src/BiddingService'
+
+          - name: 'emircanduman/identity-svc'
+            path: 'src/IdentityService'
+
+          - name: 'emircanduman/notify-svc'
+            path: 'src/NotificationService'
+
+          - name: 'emircanduman/web-app'
+            path: 'frontend/web-app'
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
