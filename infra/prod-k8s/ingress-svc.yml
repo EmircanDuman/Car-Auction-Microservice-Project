@@ -2,10 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-svc
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
   labels:
     name: ingress-svc
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - app.emircancarauction.site
+    - api.emircancarauction.site
+    - id.emircancarauction.site
+    secretName: carsties-tls
   rules:
   - host: app.emircancarauction.site
     http:
