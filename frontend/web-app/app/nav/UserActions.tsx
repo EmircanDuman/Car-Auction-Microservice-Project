@@ -44,7 +44,7 @@ export default function UserActions({user}: Props) {
       </DropdownItem>
       <DropdownItem icon={HiCog}>
         <Link href='/session'>
-          Session (dev only!)
+          Session (dev only!!)
         </Link>
       </DropdownItem>
       <DropdownDivider />
