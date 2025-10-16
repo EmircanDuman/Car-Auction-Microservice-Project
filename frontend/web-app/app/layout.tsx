@@ -22,7 +22,13 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
-        hello
+        <SessionProvider>
+          <ToasterProvider />
+          <Navbar />
+          <main className="container mx-auto px-5 pt-10">
+            <SignalRProvider>{children}</SignalRProvider>
+          </main>
+        </SessionProvider>
       </body>
     </html>
   );
