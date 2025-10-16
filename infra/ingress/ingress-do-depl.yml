@@ -339,7 +339,8 @@ kind: Service
 metadata:
   annotations:
     service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
-    service.beta.kubernetes.io/do-loadbalancer-hostname: "workaround.emircancarauction.site"
+    service.beta.kubernetes.io/do-loadbalancer-hostname: "app.emircancarauction.site"
+    service.beta.kubernetes.io/do-loadbalancer-type: "REGIONAL"
   labels:
     app.kubernetes.io/component: controller
     app.kubernetes.io/instance: ingress-nginx
